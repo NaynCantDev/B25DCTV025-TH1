@@ -4,62 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Trang web giới thiệu bản thân của Nguyễn Tiến Hoàng (Nayn) - Sinh viên ngành AIoT tại Học viện Công nghệ Bưu chính Viễn thông (PTIT).">
+    <meta name="description" content="Portfolio cá nhân của Nguyễn Tiến Hoàng (Nayn) - Sinh viên ngành AIoT PTIT, chuyên sâu Computer Vision & Deep Learning.">
     <meta name="author" content="Nguyễn Tiến Hoàng - B25DCTV025">
-    <title>Nguyễn Tiến Hoàng (Nayn) | Portfolio Cá Nhân - PTIT</title>
+    <title>Nguyễn Tiến Hoàng | Portfolio</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- HEADER & NAVIGATION (Feature 1: Responsive Menu & Feature 3: Theme Toggle) -->
+    <!-- HEADER -->
     <header class="site-header" id="header">
         <div class="container header-container">
             <a href="#hero" class="logo-brand">
-                <span class="logo-symbol">&lt;/&gt;</span>
-                <span class="logo-text">Hoang<span>.aiot</span></span>
+                <span class="logo-name">Nguyễn Tiến Hoàng</span>
+                <span class="logo-tag">Nayn</span>
             </a>
 
             <nav class="main-nav" id="main-nav" aria-label="Menu chính">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#hero" class="nav-link active">Trang chủ</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">Giới thiệu</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link">Kỹ năng</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Dự án</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Liên hệ</a></li>
+                    <li><a href="#hero" class="nav-link active">Trang chủ</a></li>
+                    <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                    <li><a href="#experience" class="nav-link">Kinh nghiệm</a></li>
+                    <li><a href="#skills" class="nav-link">Kỹ thuật</a></li>
+                    <li><a href="#projects" class="nav-link">Dự án</a></li>
+                    <li><a href="#contact" class="nav-link">Liên hệ</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <!-- Theme Toggle Button -->
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Chuyển đổi giao diện sáng/tối" title="Chuyển chế độ Sáng/Tối">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Đổi giao diện sáng/tối" title="Đổi Theme">
                     <span class="sun-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     </span>
                     <span class="moon-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     </span>
                 </button>
 
-                <!-- Hamburger Button for Mobile -->
                 <button class="hamburger-btn" id="hamburger-btn" aria-label="Mở menu điều hướng" aria-expanded="false">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -70,593 +56,463 @@
     </header>
 
     <main id="main-content">
-        <!-- HERO / GIỚI THIỆU TỔNG QUAN -->
+        <!-- HERO SECTION -->
         <section class="hero-section" id="hero">
             <div class="container hero-container">
                 <div class="hero-content reveal">
-                    <div class="badge-pill">
+                    <div class="status-indicator">
                         <span class="status-dot"></span>
-                        <span>Sinh viên AIoT • PTIT Hà Nội</span>
+                        <span class="status-text">Sinh viên AIoT • Học viện Công nghệ Bưu chính Viễn thông</span>
                     </div>
-                    <h1 class="hero-title">
-                        Xin chào, mình là <br>
-                        <span class="highlight-gradient">Nguyễn Tiến Hoàng</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        Thường được biết đến với tên gọi <strong>Nayn</strong> (Mã SV: <code class="code-badge">B25DCTV025</code>).
-                        Sinh viên chuyên ngành <em>Trí tuệ nhân tạo vạn vật (AIoT)</em> tại Học viện Công nghệ Bưu chính Viễn thông.
-                    </p>
-                    <p class="hero-description">
-                        Đam mê nghiên cứu <strong>Thị giác máy tính (Computer Vision)</strong>, <strong>AI Agents</strong>,
-                        và xây dựng các ứng dụng Web tương tác hiện đại. Luôn tìm tòi, ứng dụng công nghệ để giải quyết các bài toán thực tiễn.
+
+                    <h1 class="hero-title">Nguyễn Tiến Hoàng</h1>
+                    <p class="hero-alias">Alias: <span class="alias-highlight">Nayn</span> • Mã SV: <code>B25DCTV025</code> • Lớp: <code>D25CQTV01-B</code></p>
+
+                    <p class="hero-lead">
+                        Sinh viên ngành Trí tuệ nhân tạo vạn vật (AIoT) tại PTIT.
+                        Tập trung chuyên sâu vào mảng <strong>Thị giác máy tính (Computer Vision)</strong> trong lĩnh vực <strong>Deep Learning</strong>,
+                        đồng thời rèn luyện tư duy lập trình học thuật với C/C++ và kiến trúc hướng đối tượng (OOP).
                     </p>
 
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>Khám phá dự án</span>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <span>Liên hệ hợp tác</span>
-                        </a>
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary">Xem dự án thực tế</a>
+                        <a href="#contact" class="btn btn-secondary">Thông tin liên hệ</a>
                     </div>
 
-                    <div class="hero-socials">
-                        <span class="social-label">Kênh kết nối:</span>
-                        <div class="social-links">
-                            <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub: NaynCantDev">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <div class="hero-social-row">
+                        <span class="social-caption">Liên kết:</span>
+                        <div class="social-links-list">
+                            <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer" class="social-link-item" title="GitHub: NaynCantDev">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>GitHub</span>
                             </a>
-                            <a href="https://www.kaggle.com/naynthedev" target="_blank" rel="noopener noreferrer" class="social-icon" title="Kaggle: naynthepromt">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.047-.076.088-.13.111-.054.02-.124.03-.2.03h-3.414c-.13 0-.25-.05-.34-.14l-4.57-5.61-1.63 1.55v4.06c0 .19-.15.34-.34.34H5.03c-.19 0-.34-.15-.34-.34V.34c0-.19.15-.34.34-.34h3.17c.19 0 .34.15.34.34v14.47l5.94-6.07c.09-.09.21-.14.34-.14h3.53c.08 0 .15.01.2.03.06.02.11.06.14.11.04.05.06.11.06.18 0 .08-.03.15-.08.21l-5.64 5.61 5.86 8.78c.05.06.07.13.07.2 0 .07-.03.14-.07.19z"/></svg>
+                            <a href="https://www.facebook.com/hoangdayanhem/" target="_blank" rel="noopener noreferrer" class="social-link-item" title="Facebook: Nguyễn Tiến Hoàng">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <span>Facebook</span>
                             </a>
-                            <a href="https://www.facebook.com/hoangdayanhem/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Facebook: Nguyễn Tiến Hoàng">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <a href="https://www.kaggle.com/naynthedev" target="_blank" rel="noopener noreferrer" class="social-link-item" title="Kaggle: NaynthePromt">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.047-.076.088-.13.111-.054.02-.124.03-.2.03h-3.414c-.13 0-.25-.05-.34-.14l-4.57-5.61-1.63 1.55v4.06c0 .19-.15.34-.34.34H5.03c-.19 0-.34-.15-.34-.34V.34c0-.19.15-.34.34-.34h3.17c.19 0 .34.15.34.34v14.47l5.94-6.07c.09-.09.21-.14.34-.14h3.53c.08 0 .15.01.2.03.06.02.11.06.14.11.04.05.06.11.06.18 0 .08-.03.15-.08.21l-5.64 5.61 5.86 8.78c.05.06.07.13.07.2 0 .07-.03.14-.07.19z"/></svg>
+                                <span>Kaggle</span>
                             </a>
-                            <a href="mailto:hoang.iq2372007@gmail.com" class="social-icon" title="Email: hoang.iq2372007@gmail.com">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:hoang.iq2372007@gmail.com" class="social-link-item" title="Email: hoang.iq2372007@gmail.com">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <span>Email</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="hero-image-wrapper reveal">
-                    <div class="avatar-card">
-                        <div class="avatar-glow"></div>
-                        <img src="assets/avatar.jpg" alt="Ảnh chân dung Nguyễn Tiến Hoàng" class="avatar-img" id="user-avatar">
-                        <div class="avatar-card-info">
-                            <span class="info-name">Nguyễn Tiến Hoàng</span>
-                            <span class="info-role">Lớp D25CQTV01-B</span>
-                        </div>
+                <div class="hero-visual reveal">
+                    <div class="avatar-frame">
+                        <img src="assets/avatar.jpg" alt="Ảnh đại diện Nguyễn Tiến Hoàng" class="avatar-image">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT / GIỚI THIỆU CHI TIẾT -->
-        <section class="section about-section" id="about">
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
             <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Hồ sơ năng lực</span>
-                    <h2 class="section-title">Giới Thiệu Bản Thân</h2>
-                    <p class="section-subtitle">Thông tin học vấn, hoạt động nghiên cứu và định hướng phát triển cá nhân.</p>
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-heading">Giới Thiệu</h2>
+                    <p class="section-subheading">Hành trình học tập và định hướng nghiên cứu chuyên môn.</p>
                 </div>
 
-                <div class="about-grid">
-                    <!-- Card 1: Học vấn -->
-                    <div class="card about-card reveal">
-                        <div class="card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                        </div>
-                        <h3 class="card-title">Học vấn & Thành tích</h3>
-                        <ul class="timeline-list">
-                            <li class="timeline-item">
-                                <span class="timeline-year">2025 - Nay</span>
-                                <div class="timeline-content">
-                                    <h4>Học viện Công nghệ Bưu chính Viễn thông</h4>
-                                    <p>Sinh viên ngành Trí tuệ nhân tạo vạn vật (AIoT). Lớp D25CQTV01-B.</p>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <span class="timeline-year">2022 - 2025</span>
-                                <div class="timeline-content">
-                                    <h4>THPT Chuyên / Lào Cai</h4>
-                                    <p><strong>Giải Nhì</strong> kỳ thi Học sinh giỏi Tin học cấp tỉnh (2025).</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 2: Hoạt động & Nghiên cứu -->
-                    <div class="card about-card reveal">
-                        <div class="card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        </div>
-                        <h3 class="card-title">Hoạt động & Nghiên cứu</h3>
-                        <ul class="timeline-list">
-                            <li class="timeline-item">
-                                <span class="timeline-year">2025 - Nay</span>
-                                <div class="timeline-content">
-                                    <h4>Cộng tác viên Lab CNS (RIPT)</h4>
-                                    <p>Tham gia thử nghiệm mô hình Computer Vision và xử lý dữ liệu thực tế.</p>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <span class="timeline-year">2026</span>
-                                <div class="timeline-content">
-                                    <h4>Olympic AI PTIT 2026</h4>
-                                    <p>Tham gia tranh tài ở lĩnh vực ứng dụng Trí tuệ nhân tạo và giải thuật.</p>
-                                </div>
-                            </li>
-                            <li class="timeline-item">
-                                <span class="timeline-year">Hiện tại</span>
-                                <div class="timeline-content">
-                                    <h4>CLB Lập trình PTIT (PROPTIT)</h4>
-                                    <p>Thành viên Ban Đào tạo, hỗ trợ biên soạn giáo án và training thuật toán.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 3: Mục tiêu nghề nghiệp -->
-                    <div class="card about-card reveal">
-                        <div class="card-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-                        </div>
-                        <h3 class="card-title">Định hướng & Mục tiêu</h3>
-                        <div class="goal-box">
-                            <p>
-                                <strong>Kỹ sư AI / Nghiên cứu sinh AIoT:</strong> Tập trung chuyên sâu vào các kiến trúc mô hình học sâu,
-                                tối ưu thuật toán suy luận trên thiết bị nhúng và biên (Edge AI).
-                            </p>
-                            <p>
-                                <strong>Nền tảng Lập trình toàn diện:</strong> Kết hợp vững vàng kỹ năng thuật toán (C/C++, Python)
-                                với khả năng phát triển giao diện hiện đại (HTML/CSS/JS) để hiện thực hóa các ý tưởng sản phẩm hoàn chỉnh.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS / KỸ NĂNG -->
-        <section class="section skills-section" id="skills">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Năng lực chuyên môn</span>
-                    <h2 class="section-title">Kỹ Năng Kỹ Thuật</h2>
-                    <p class="section-subtitle">Các ngôn ngữ lập trình, thư viện, công nghệ và công cụ đã được tôi luyện qua thực tiễn.</p>
-                </div>
-
-                <div class="skills-grid">
-                    <!-- Kỹ năng Lập trình & AI -->
-                    <div class="card skill-category-card reveal">
-                        <div class="category-header">
-                            <div class="cat-icon cat-ai">AI</div>
-                            <h3>Trí tuệ nhân tạo & Khoa học dữ liệu</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Python & Thư viện Data (NumPy, Pandas)</span>
-                                    <span class="skill-level">88%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 88%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Computer Vision (OpenCV, Face Recognition)</span>
-                                    <span class="skill-level">82%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 82%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">C / C++ (Cấu trúc dữ liệu & Giải thuật)</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 85%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Xử lý dữ liệu & Huấn luyện mô hình cơ bản</span>
-                                    <span class="skill-level">78%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 78%;"></div></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kỹ năng Lập trình Web -->
-                    <div class="card skill-category-card reveal">
-                        <div class="category-header">
-                            <div class="cat-icon cat-web">WEB</div>
-                            <h3>Lập trình Web & Giao diện</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">HTML5 (Semantic Web, Biểu mẫu, Khả năng truy cập)</span>
-                                    <span class="skill-level">90%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 90%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">CSS3 (Flexbox, CSS Grid, Responsive Design)</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 85%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">JavaScript ES6+ (DOM Manipulation, Events, Async)</span>
-                                    <span class="skill-level">80%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 80%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Tối ưu hóa UI/UX & Tương tác người dùng</span>
-                                    <span class="skill-level">82%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 82%;"></div></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kỹ năng Công cụ & Hệ thống -->
-                    <div class="card skill-category-card reveal">
-                        <div class="category-header">
-                            <div class="cat-icon cat-tools">OPS</div>
-                            <h3>Công cụ & Môi trường hệ thống</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Git & GitHub (Quản lý phiên bản mã nguồn)</span>
-                                    <span class="skill-level">85%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 85%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Linux Command Line & Bash Scripting</span>
-                                    <span class="skill-level">75%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 75%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Docker (Container hóa ứng dụng cơ bản)</span>
-                                    <span class="skill-level">70%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 70%;"></div></div>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">VS Code, Jupyter Notebook & Công cụ lập trình</span>
-                                    <span class="skill-level">92%</span>
-                                </div>
-                                <div class="progress-bar"><div class="progress-fill" style="--percent: 92%;"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS / DỰ ÁN (Feature 6: Lọc và Tìm kiếm bằng JS) -->
-        <section class="section projects-section" id="projects">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Sản phẩm thực tế</span>
-                    <h2 class="section-title">Dự Án Tiêu Biểu</h2>
-                    <p class="section-subtitle">Một số dự án cá nhân và học tập đã được triển khai (Tối thiểu 3 dự án theo yêu cầu).</p>
-                </div>
-
-                <!-- Feature 6 Controls: Search & Category Filter -->
-                <div class="projects-controls reveal">
-                    <div class="search-box">
-                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                        <input type="text" id="project-search-input" placeholder="Tìm kiếm theo tên dự án, kỹ năng, công nghệ..." aria-label="Tìm kiếm dự án">
-                        <button type="button" id="clear-search-btn" class="clear-btn" aria-label="Xóa từ khóa tìm kiếm" style="display: none;">&times;</button>
-                    </div>
-
-                    <div class="filter-buttons" role="tablist">
-                        <button class="filter-btn active" data-filter="all" role="tab">Tất cả (<span id="count-all">4</span>)</button>
-                        <button class="filter-btn" data-filter="ai" role="tab">AI & Thị giác máy (<span id="count-ai">2</span>)</button>
-                        <button class="filter-btn" data-filter="web" role="tab">Lập trình Web (<span id="count-web">2</span>)</button>
-                    </div>
-                </div>
-
-                <!-- Projects Grid (Flexbox/Grid layout) -->
-                <div class="projects-grid" id="projects-grid">
-                    <!-- Project 1: CNS AI Face Model Tester -->
-                    <article class="project-card reveal" data-category="ai" data-keywords="cns ai face model tester python opencv deep learning computer vision nhan dien khuon mat">
-                        <div class="project-banner project-banner-ai">
-                            <span class="project-category-badge">Trí tuệ nhân tạo</span>
-                            <div class="banner-icon">🤖</div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta">
-                                <span class="project-year">2025</span>
-                                <span class="project-status">Hoàn thành</span>
-                            </div>
-                            <h3 class="project-title">CNS AI Face Model Tester</h3>
-                            <p class="project-desc">
-                                Bộ công cụ kiểm thử tự động đo lường độ chính xác và tốc độ suy luận của mô hình nhận diện khuôn mặt
-                                trong điều kiện góc nghiêng và ánh sáng phức tạp, hỗ trợ trích xuất đặc trưng và so sánh cosine similarity.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">OpenCV</span>
-                                <span class="tag">Deep Learning</span>
-                                <span class="tag">Face Recognition</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                    <span>Mã nguồn</span>
-                                </a>
-                                <a href="#contact" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                    <span>Chi tiết</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: TravelPlanner AI Agent & Benchmark -->
-                    <article class="project-card reveal" data-category="ai" data-keywords="travelplanner ai agent benchmark llm nlp travel planning benchmark nghien cuu">
-                        <div class="project-banner project-banner-agent">
-                            <span class="project-category-badge">AI Agent / LLM</span>
-                            <div class="banner-icon">🧭</div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta">
-                                <span class="project-year">2026</span>
-                                <span class="project-status">Đang phát triển</span>
-                            </div>
-                            <h3 class="project-title">TravelPlanner AI Agent Benchmark</h3>
-                            <p class="project-desc">
-                                Khảo sát và đánh giá năng lực lập kế hoạch hành trình phức tạp của các mô hình LLM Agents dưới các ràng buộc
-                                môi trường (ngân sách, thời gian, phương tiện di chuyển, sở thích cá nhân hóa).
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">LLM Agents</span>
-                                <span class="tag">NLP</span>
-                                <span class="tag">Benchmark</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                    <span>Mã nguồn</span>
-                                </a>
-                                <a href="#contact" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                    <span>Chi tiết</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: Trang Portfolio Cá Nhân (Bài TH01) -->
-                    <article class="project-card reveal" data-category="web" data-keywords="trang web ca nhan portfolio th01 ltw lap trinh web flexbox grid responsive js">
-                        <div class="project-banner project-banner-web">
-                            <span class="project-category-badge">Lập trình Web</span>
-                            <div class="banner-icon">🌐</div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta">
-                                <span class="project-year">2026</span>
-                                <span class="project-status">Hoàn thành</span>
-                            </div>
-                            <h3 class="project-title">Trang Web Cá Nhân (Bài TH01)</h3>
-                            <p class="project-desc">
-                                Website giới thiệu bản thân chuẩn RWD thiết kế theo yêu cầu môn Lập trình Web PTIT. Áp dụng Flexbox,
-                                CSS Grid hiện đại, Dark/Light mode và hơn 8 tính năng tương tác bằng Vanilla JS.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">HTML5</span>
-                                <span class="tag">CSS3 Grid/Flex</span>
-                                <span class="tag">JavaScript ES6</span>
-                                <span class="tag">Responsive</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                    <span>Mã nguồn</span>
-                                </a>
-                                <a href="#hero" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                                    <span>Đang xem</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4: Smart Calculator Web App -->
-                    <article class="project-card reveal" data-category="web" data-keywords="smart calculator web app may tinh bo tui bieu thuc lich su js dom">
-                        <div class="project-banner project-banner-calc">
-                            <span class="project-category-badge">Ứng dụng Web</span>
-                            <div class="banner-icon">🧮</div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta">
-                                <span class="project-year">2026</span>
-                                <span class="project-status">Hoàn thành</span>
-                            </div>
-                            <h3 class="project-title">Smart Scientific Calculator</h3>
-                            <p class="project-desc">
-                                Ứng dụng máy tính cầm tay trực quan xây dựng bằng HTML/CSS/JavaScript thuần, hỗ trợ tính toán
-                                biểu thức đại số, các phép toán lượng giác, căn bậc hai và lưu lại lược sử tính toán.
-                            </p>
-                            <div class="project-tags">
-                                <span class="tag">HTML5</span>
-                                <span class="tag">CSS3</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">DOM UI</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                                    <span>Mã nguồn</span>
-                                </a>
-                                <a href="#contact" class="btn-project-link">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                    <span>Chi tiết</span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Empty state khi tìm kiếm không ra kết quả -->
-                <div class="empty-projects" id="empty-projects" style="display: none;">
-                    <div class="empty-icon">🔍</div>
-                    <h3>Không tìm thấy dự án phù hợp</h3>
-                    <p>Hãy thử tìm kiếm bằng từ khóa khác hoặc bấm nút "Tất cả" bên trên.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT / LIÊN HỆ (Feature 2: Form Validation & Feature 5: Character Counter) -->
-        <section class="section contact-section" id="contact">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="section-tag">Kết nối & Hợp tác</span>
-                    <h2 class="section-title">Liên Hệ Với Tôi</h2>
-                    <p class="section-subtitle">Bạn có ý tưởng dự án hoặc muốn trao đổi về nghiên cứu AI/Web? Đừng ngần ngại để lại lời nhắn.</p>
-                </div>
-
-                <div class="contact-grid">
-                    <!-- Thông tin liên hệ trực tiếp -->
-                    <div class="contact-info-panel reveal">
-                        <h3 class="panel-title">Thông Tin Cá Nhân</h3>
-                        <p class="panel-desc">
-                            Tôi luôn sẵn sàng tiếp nhận các cơ hội nghiên cứu, thực tập và dự án phát triển công nghệ mới.
+                <div class="about-two-col">
+                    <div class="about-text-block reveal">
+                        <p class="paragraph">
+                            Hiện đang là sinh viên ngành <strong>Trí tuệ nhân tạo vạn vật (AIoT)</strong> tại Học viện Công nghệ Bưu chính Viễn thông (PTIT).
+                            Mục tiêu của Hoàng là kết hợp nền tảng thuật toán vững chắc với các kỹ thuật học sâu tiên tiến để xây dựng các giải pháp thị giác máy tính thực tế.
                         </p>
+                        <p class="paragraph">
+                            Trước khi vào đại học, Hoàng từng đạt <strong>Giải Nhì kỳ thi Học sinh giỏi Tin học cấp tỉnh Lào Cai (2025)</strong>.
+                            Hiện tại, bên cạnh việc học tại trường và nghiên cứu tại lab, Hoàng còn tham gia sinh hoạt tại CLB Lập trình PTIT (PROPTIT).
+                        </p>
+                    </div>
 
-                        <div class="contact-details">
-                            <div class="contact-detail-item">
-                                <div class="detail-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                                </div>
-                                <div class="detail-content">
-                                    <span class="detail-label">Họ và tên:</span>
-                                    <span class="detail-value">Nguyễn Tiến Hoàng (Nayn)</span>
-                                </div>
+                    <div class="about-highlights reveal">
+                        <div class="highlight-item">
+                            <span class="highlight-label">Họ và tên</span>
+                            <span class="highlight-val">Nguyễn Tiến Hoàng (Nayn)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-label">Mã sinh viên</span>
+                            <span class="highlight-val">B25DCTV025</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-label">Lớp sinh hoạt</span>
+                            <span class="highlight-val">D25CQTV01-B</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-label">Chuyên ngành</span>
+                            <span class="highlight-val">Trí tuệ nhân tạo vạn vật (AIoT)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-label">Trường đào tạo</span>
+                            <span class="highlight-val">Học viện Công nghệ Bưu chính Viễn thông (PTIT)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION (Dữ liệu xác thực từ Facebook cá nhân) -->
+        <section class="section section-bordered" id="experience">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-heading">Hoạt Động & Kinh Nghiệm</h2>
+                    <p class="section-subheading">Các môi trường làm việc và lab nghiên cứu đang tham gia.</p>
+                </div>
+
+                <div class="experience-timeline reveal">
+                    <!-- Item 1: Dagoras -->
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            <span class="time-badge">09/2026 - Hiện tại</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <h3 class="role-title">Thực Tập Sinh Kỹ Thuật</h3>
+                            <div class="org-name">Dagoras Technology and Communications • Hà Nội</div>
+                            <p class="role-description">
+                                Tham gia tìm hiểu, nghiên cứu và phát triển các giải pháp kỹ thuật, công nghệ thực tế theo định hướng công ty.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: CNS Lab RIPT -->
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            <span class="time-badge">11/2025 - Hiện tại</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <h3 class="role-title">Thành Viên Nghiên Cứu Lab CNS</h3>
+                            <div class="org-name">Viện Khoa học Kỹ thuật Bưu điện (RIPT) - PTIT • Hà Nội</div>
+                            <p class="role-description">
+                                Tham gia nghiên cứu, thử nghiệm các mô hình học sâu và thị giác máy tính (Computer Vision), xử lý dữ liệu ảnh và nhận diện khuôn mặt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: PROPTIT -->
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            <span class="time-badge">2025 - Hiện tại</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <h3 class="role-title">Thành Viên CLB Lập Trình PTIT (PROPTIT)</h3>
+                            <div class="org-name">Ban Đào Tạo • Học viện CNBCVT</div>
+                            <p class="role-description">
+                                Trau dồi tư duy thuật toán, hỗ trợ trao đổi học thuật và rèn luyện kỹ năng lập trình giải quyết vấn đề.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION (Chân thực, không thanh % điêu) -->
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-heading">Năng Lực Kỹ Thuật</h2>
+                    <p class="section-subheading">Những gì Hoàng đã có, đang làm và định hướng chuyên sâu.</p>
+                </div>
+
+                <div class="skills-grid reveal">
+                    <!-- Nhóm 1: AI & Deep Learning -->
+                    <div class="skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-category-tag tag-focus">Trọng tâm chuyên sâu</span>
+                            <h3 class="skill-box-title">Computer Vision & Deep Learning</h3>
+                        </div>
+                        <p class="skill-box-desc">
+                            Chuyên sâu theo mảng Thị giác máy tính trong lĩnh vực Deep Learning. Huấn luyện mô hình nhận diện khuôn mặt, trích xuất đặc trưng và xử lý dữ liệu hình ảnh.
+                        </p>
+                        <div class="skill-tag-list">
+                            <span class="skill-pill">Computer Vision</span>
+                            <span class="skill-pill">Deep Learning</span>
+                            <span class="skill-pill">OpenCV</span>
+                            <span class="skill-pill">Face Recognition</span>
+                            <span class="skill-pill">Data Processing</span>
+                        </div>
+                    </div>
+
+                    <!-- Nhóm 2: Lập trình học thuật & Ngôn ngữ -->
+                    <div class="skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-category-tag tag-base">Nền tảng vững chắc</span>
+                            <h3 class="skill-box-title">Lập Trình Học Thuật & Scripting</h3>
+                        </div>
+                        <p class="skill-box-desc">
+                            Thành thạo lập trình học thuật với C và C++ cho cấu trúc dữ liệu & giải thuật. Sử dụng Python chuyên dụng cho huấn luyện mô hình ML/DL.
+                        </p>
+                        <div class="skill-tag-list">
+                            <span class="skill-pill">C / C++ (Học thuật)</span>
+                            <span class="skill-pill">Python (ML / DL)</span>
+                            <span class="skill-pill">Data Structures</span>
+                            <span class="skill-pill">Algorithms</span>
+                        </div>
+                    </div>
+
+                    <!-- Nhóm 3: Đang học tập & Mở rộng -->
+                    <div class="skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-category-tag tag-learning">Đang học tập</span>
+                            <h3 class="skill-box-title">OOP (Java) & Lập Trình Web</h3>
+                        </div>
+                        <p class="skill-box-desc">
+                            Đang học Java ở mảng Lập trình hướng đối tượng (OOP). Đồng thời hoàn thành học phần Lập trình Web tại trường với HTML5, CSS3 và Vanilla JavaScript.
+                        </p>
+                        <div class="skill-tag-list">
+                            <span class="skill-pill">Java (OOP)</span>
+                            <span class="skill-pill">HTML5 & Semantic Web</span>
+                            <span class="skill-pill">CSS3 (Grid / Flexbox)</span>
+                            <span class="skill-pill">JavaScript ES6+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (Dự án thực tế từ GitHub của Nayn) -->
+        <section class="section section-bordered" id="projects">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-heading">Dự Án Cá Nhân</h2>
+                    <p class="section-subheading">Các kho mã nguồn thực tế trên tài khoản GitHub <a href="https://github.com/NaynCantDev" target="_blank" rel="noopener noreferrer">@NaynCantDev</a>.</p>
+                </div>
+
+                <!-- Controls: Filter tabs & Search input -->
+                <div class="projects-toolbar reveal">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">Tất cả (5)</button>
+                        <button class="filter-tab" data-filter="ai">AI & Vision (2)</button>
+                        <button class="filter-tab" data-filter="software">Học thuật & OOP (2)</button>
+                        <button class="filter-tab" data-filter="web">Web (1)</button>
+                    </div>
+
+                    <div class="search-field">
+                        <input type="text" id="project-search-input" placeholder="Tìm theo tên dự án, ngôn ngữ, tag..." aria-label="Tìm kiếm dự án">
+                        <button type="button" id="clear-search-btn" class="clear-input-btn" aria-label="Xóa tìm kiếm" style="display: none;">&times;</button>
+                    </div>
+                </div>
+
+                <!-- Projects Minimalist Grid -->
+                <div class="projects-list" id="projects-grid">
+                    <!-- Project 1: Face_recognize -->
+                    <article class="project-item reveal" data-category="ai" data-keywords="face_recognize python opencv computer vision face recognition deep learning ript cns">
+                        <div class="project-header-row">
+                            <h3 class="project-name">
+                                <a href="https://github.com/NaynCantDev/Face_recognize" target="_blank" rel="noopener noreferrer">Face_recognize</a>
+                            </h3>
+                            <span class="project-year-pill">2026</span>
+                        </div>
+                        <p class="project-summary">
+                            Ứng dụng nhận diện khuôn mặt thực hiện trong quá trình nghiên cứu tại CNS Lab. Hỗ trợ tiền xử lý dữ liệu ảnh, trích xuất vector khuôn mặt và kiểm thử độ chính xác nhận diện.
+                        </p>
+                        <div class="project-tags-row">
+                            <span class="lang-tag lang-python">Python</span>
+                            <span class="meta-tag">Computer Vision</span>
+                            <span class="meta-tag">OpenCV</span>
+                            <span class="meta-tag">CNS Lab</span>
+                        </div>
+                        <div class="project-links-row">
+                            <a href="https://github.com/NaynCantDev/Face_recognize" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <span>Xem mã nguồn trên GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Learning-About-AI-Things -->
+                    <article class="project-item reveal" data-category="ai" data-keywords="learning about ai things jupyter notebook python machine learning deep learning data science">
+                        <div class="project-header-row">
+                            <h3 class="project-name">
+                                <a href="https://github.com/NaynCantDev/Learning-About-AI-Things" target="_blank" rel="noopener noreferrer">Learning-About-AI-Things</a>
+                            </h3>
+                            <span class="project-year-pill">2026</span>
+                        </div>
+                        <p class="project-summary">
+                            Kho lưu trữ nhật ký học tập, thử nghiệm các kỹ thuật huấn luyện mô hình Machine Learning / Deep Learning, xử lý dữ liệu và thực nghiệm thuật toán trên Jupyter Notebook.
+                        </p>
+                        <div class="project-tags-row">
+                            <span class="lang-tag lang-python">Python</span>
+                            <span class="meta-tag">Jupyter Notebook</span>
+                            <span class="meta-tag">Machine Learning</span>
+                            <span class="meta-tag">Deep Learning</span>
+                        </div>
+                        <div class="project-links-row">
+                            <a href="https://github.com/NaynCantDev/Learning-About-AI-Things" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <span>Xem mã nguồn trên GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: ProPTIT_Java -->
+                    <article class="project-item reveal" data-category="software" data-keywords="proptit java oop object oriented programming lap trinh huong doi tuong">
+                        <div class="project-header-row">
+                            <h3 class="project-name">
+                                <a href="https://github.com/NaynCantDev/ProPTIT_Java" target="_blank" rel="noopener noreferrer">ProPTIT_Java</a>
+                            </h3>
+                            <span class="project-year-pill">2026</span>
+                        </div>
+                        <p class="project-summary">
+                            Dự án tự học và làm quen với ngôn ngữ Java và tư duy Lập trình hướng đối tượng (OOP). Cài đặt các bài toán thực hành, tính đóng gói, kế thừa và đa hình.
+                        </p>
+                        <div class="project-tags-row">
+                            <span class="lang-tag lang-java">Java</span>
+                            <span class="meta-tag">OOP</span>
+                            <span class="meta-tag">Học tập</span>
+                            <span class="meta-tag">PROPTIT</span>
+                        </div>
+                        <div class="project-links-row">
+                            <a href="https://github.com/NaynCantDev/ProPTIT_Java" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <span>Xem mã nguồn trên GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: simulate-a-ball -->
+                    <article class="project-item reveal" data-category="software" data-keywords="simulate a ball python pygame vat ly do hoa footstep github">
+                        <div class="project-header-row">
+                            <h3 class="project-name">
+                                <a href="https://github.com/NaynCantDev/simulate-a-ball" target="_blank" rel="noopener noreferrer">simulate-a-ball</a>
+                            </h3>
+                            <span class="project-year-pill">2025</span>
+                        </div>
+                        <p class="project-summary">
+                            Dự án lập trình đầu tiên trên GitHub mô phỏng quả bóng nảy theo vật lý cơ bản bằng thư viện Pygame. Dự án đánh dấu bước khởi đầu làm quen với Git và quản lý mã nguồn.
+                        </p>
+                        <div class="project-tags-row">
+                            <span class="lang-tag lang-python">Python</span>
+                            <span class="meta-tag">Pygame</span>
+                            <span class="meta-tag">Mô phỏng vật lý</span>
+                        </div>
+                        <div class="project-links-row">
+                            <a href="https://github.com/NaynCantDev/simulate-a-ball" target="_blank" rel="noopener noreferrer" class="link-btn">
+                                <span>Xem mã nguồn trên GitHub</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Portfolio Web TH01 -->
+                    <article class="project-item reveal" data-category="web" data-keywords="portfolio web th01 lap trinh web ltw html css js responsive minimal ptit">
+                        <div class="project-header-row">
+                            <h3 class="project-name">
+                                <a href="#hero">Personal Portfolio (Bài TH01)</a>
+                            </h3>
+                            <span class="project-year-pill">2026</span>
+                        </div>
+                        <p class="project-summary">
+                            Website giới thiệu bản thân theo phong cách tối giản (Minimalism) phục vụ bài thực hành 01 môn Lập trình Web PTIT. Thiết kế Responsive bằng CSS Grid/Flexbox và 9 tính năng Vanilla JS.
+                        </p>
+                        <div class="project-tags-row">
+                            <span class="lang-tag lang-web">HTML5 / CSS3 / JS</span>
+                            <span class="meta-tag">CSS Grid & Flexbox</span>
+                            <span class="meta-tag">Responsive</span>
+                            <span class="meta-tag">PTIT LTW</span>
+                        </div>
+                        <div class="project-links-row">
+                            <a href="#hero" class="link-btn">
+                                <span>Đang xem trang này</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="empty-state" id="empty-projects" style="display: none;">
+                    <p>Không tìm thấy dự án phù hợp với từ khóa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-heading">Liên Hệ</h2>
+                    <p class="section-subheading">Trao đổi về nghiên cứu AI / Computer Vision hoặc công việc học tập.</p>
+                </div>
+
+                <div class="contact-layout">
+                    <!-- Cột thông tin liên hệ -->
+                    <div class="contact-details-box reveal">
+                        <h3 class="box-heading">Thông Tin Sinh Viên</h3>
+
+                        <div class="contact-info-list">
+                            <div class="info-row">
+                                <span class="info-prop">Họ và tên:</span>
+                                <span class="info-val">Nguyễn Tiến Hoàng (Nayn)</span>
                             </div>
-
-                            <div class="contact-detail-item">
-                                <div class="detail-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                                </div>
-                                <div class="detail-content">
-                                    <span class="detail-label">Mã sinh viên & Lớp:</span>
-                                    <span class="detail-value">B25DCTV025 • Lớp D25CQTV01-B</span>
-                                </div>
+                            <div class="info-row">
+                                <span class="info-prop">Mã SV & Lớp:</span>
+                                <span class="info-val"><code>B25DCTV025</code> • <code>D25CQTV01-B</code></span>
                             </div>
-
-                            <div class="contact-detail-item">
-                                <div class="detail-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                                </div>
-                                <div class="detail-content">
-                                    <span class="detail-label">Email liên hệ:</span>
-                                    <span class="detail-value"><a href="mailto:hoang.iq2372007@gmail.com">hoang.iq2372007@gmail.com</a></span>
-                                    <span class="detail-subvalue"><a href="mailto:hoangnt.b25tv025@stu.ptit.edu.vn">hoangnt.b25tv025@stu.ptit.edu.vn</a></span>
-                                </div>
+                            <div class="info-row">
+                                <span class="info-prop">Email chính:</span>
+                                <span class="info-val"><a href="mailto:hoang.iq2372007@gmail.com">hoang.iq2372007@gmail.com</a></span>
                             </div>
-
-                            <div class="contact-detail-item">
-                                <div class="detail-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                </div>
-                                <div class="detail-content">
-                                    <span class="detail-label">Số điện thoại:</span>
-                                    <span class="detail-value"><a href="tel:0963593207">0963 593 207</a></span>
-                                </div>
+                            <div class="info-row">
+                                <span class="info-prop">Email sinh viên:</span>
+                                <span class="info-val"><a href="mailto:hoangnt.b25tv025@stu.ptit.edu.vn">hoangnt.b25tv025@stu.ptit.edu.vn</a></span>
                             </div>
-
-                            <div class="contact-detail-item">
-                                <div class="detail-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                </div>
-                                <div class="detail-content">
-                                    <span class="detail-label">Địa chỉ học tập:</span>
-                                    <span class="detail-value">Học viện Công nghệ Bưu chính Viễn thông</span>
-                                    <span class="detail-subvalue">Km10 Đường Nguyễn Trãi, Hà Đông, Hà Nội</span>
-                                </div>
+                            <div class="info-row">
+                                <span class="info-prop">Điện thoại:</span>
+                                <span class="info-val"><a href="tel:0963593207">0963 593 207</a></span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-prop">Cơ sở học tập:</span>
+                                <span class="info-val">Học viện Công nghệ Bưu chính Viễn thông, Km10 Đường Nguyễn Trãi, Hà Đông, Hà Nội</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Form gửi tin nhắn tương tác cao -->
-                    <div class="contact-form-panel reveal">
-                        <form id="contact-form" class="contact-form" novalidate>
-                            <h3 class="panel-title">Gửi Lời Nhắn Trực Tiếp</h3>
-                            <p class="panel-desc">Biểu mẫu có kiểm tra tính hợp lệ dữ liệu (Form Validation) bằng JavaScript thuần.</p>
+                    <!-- Cột Form liên hệ (Có Validation + Char Counter) -->
+                    <div class="contact-form-box reveal">
+                        <h3 class="box-heading">Gửi Tin Nhắn Trực Tiếp</h3>
+                        <p class="box-note">Form kiểm tra dữ liệu bằng JavaScript thuần trước khi gửi.</p>
 
-                            <!-- Trường Họ và tên -->
-                            <div class="form-group" id="group-fullname">
-                                <label for="fullname" class="form-label">Họ và tên của bạn <span class="required-star">*</span></label>
-                                <div class="input-wrapper">
-                                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name" required>
-                                    <span class="validation-status-icon"></span>
-                                </div>
-                                <small class="error-msg" id="error-fullname">Vui lòng nhập họ tên đầy đủ (tối thiểu 2 ký tự).</small>
+                        <form id="contact-form" class="minimal-form" novalidate>
+                            <div class="form-field" id="group-fullname">
+                                <label for="fullname" class="field-label">Họ và tên <span class="star">*</span></label>
+                                <input type="text" id="fullname" name="fullname" class="field-input" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="name" required>
+                                <span class="field-error" id="error-fullname">Vui lòng nhập họ và tên (tối thiểu 2 ký tự).</span>
                             </div>
 
-                            <!-- Trường Email -->
-                            <div class="form-group" id="group-email">
-                                <label for="email" class="form-label">Địa chỉ Email <span class="required-star">*</span></label>
-                                <div class="input-wrapper">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Ví dụ: yourname@example.com" autocomplete="email" required>
-                                    <span class="validation-status-icon"></span>
-                                </div>
-                                <small class="error-msg" id="error-email">Vui lòng nhập địa chỉ email hợp lệ (ví dụ: name@domain.com).</small>
+                            <div class="form-field" id="group-email">
+                                <label for="email" class="field-label">Email liên hệ <span class="star">*</span></label>
+                                <input type="email" id="email" name="email" class="field-input" placeholder="Ví dụ: email@domain.com" autocomplete="email" required>
+                                <span class="field-error" id="error-email">Vui lòng nhập email hợp lệ.</span>
                             </div>
 
-                            <!-- Trường Tiêu đề -->
-                            <div class="form-group" id="group-subject">
-                                <label for="subject" class="form-label">Chủ đề liên hệ <span class="required-star">*</span></label>
-                                <div class="input-wrapper">
-                                    <select id="subject" name="subject" class="form-control" required>
-                                        <option value="" disabled selected>-- Chọn chủ đề liên hệ --</option>
-                                        <option value="research">Hợp tác nghiên cứu AI / AIoT</option>
-                                        <option value="webdev">Dự án Lập trình Web / Phần mềm</option>
-                                        <option value="academic">Trao đổi học tập môn Lập trình Web (LTW)</option>
-                                        <option value="other">Chủ đề khác</option>
-                                    </select>
-                                    <span class="validation-status-icon"></span>
-                                </div>
-                                <small class="error-msg" id="error-subject">Vui lòng lựa chọn một chủ đề liên hệ.</small>
+                            <div class="form-field" id="group-subject">
+                                <label for="subject" class="field-label">Chủ đề <span class="star">*</span></label>
+                                <select id="subject" name="subject" class="field-input" required>
+                                    <option value="" disabled selected>-- Chọn mục đích liên hệ --</option>
+                                    <option value="research">Nghiên cứu Computer Vision / Deep Learning</option>
+                                    <option value="work">Cơ hội thực tập & công việc</option>
+                                    <option value="academic">Trao đổi học phần PTIT</option>
+                                    <option value="other">Chủ đề khác</option>
+                                </select>
+                                <span class="field-error" id="error-subject">Vui lòng chọn chủ đề liên hệ.</span>
                             </div>
 
-                            <!-- Trường Lời nhắn + Đếm ký tự (Feature 5) -->
-                            <div class="form-group" id="group-message">
-                                <div class="label-with-counter">
-                                    <label for="message" class="form-label">Nội dung tin nhắn <span class="required-star">*</span></label>
-                                    <span class="char-counter" id="char-counter">
-                                        <span id="char-count">0</span> / 500 ký tự
-                                    </span>
+                            <div class="form-field" id="group-message">
+                                <div class="field-label-split">
+                                    <label for="message" class="field-label">Nội dung <span class="star">*</span></label>
+                                    <span class="char-count-text" id="char-counter"><span id="char-count">0</span> / 500</span>
                                 </div>
-                                <div class="input-wrapper">
-                                    <textarea id="message" name="message" class="form-control" rows="5" maxlength="500" placeholder="Nhập nội dung bạn muốn gửi tới Hoàng (tối thiểu 10 ký tự)..." required></textarea>
-                                </div>
-                                <small class="error-msg" id="error-message">Nội dung tin nhắn phải có ít nhất 10 ký tự.</small>
+                                <textarea id="message" name="message" rows="4" maxlength="500" class="field-input" placeholder="Nội dung tin nhắn (tối thiểu 10 ký tự)..." required></textarea>
+                                <span class="field-error" id="error-message">Nội dung tin nhắn tối thiểu 10 ký tự.</span>
                             </div>
 
-                            <!-- Submit Button -->
                             <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
-                                <span class="btn-text">Gửi Tin Nhắn</span>
-                                <span class="btn-spinner" style="display: none;">
-                                    <svg class="spinner-icon" width="18" height="18" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4 31.4"/></svg>
-                                </span>
-                                <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                <span class="btn-text">Gửi tin nhắn</span>
+                                <span class="btn-spinner" style="display: none;">Đang gửi...</span>
                             </button>
                         </form>
                     </div>
@@ -665,40 +521,26 @@
         </section>
     </main>
 
-    <!-- FOOTER (Feature 8: Dynamic Year) -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-container">
-            <div class="footer-left">
-                <p class="footer-copy">
-                    &copy; <span id="current-year">2026</span> <strong>Nguyễn Tiến Hoàng</strong> (Nayn) — Mã SV: <code>B25DCTV025</code>
-                </p>
-                <p class="footer-sub">
-                    Học phần: Lập trình Web (RIPT1306) • Lớp N2 • Học viện Công nghệ Bưu chính Viễn thông (PTIT).
-                </p>
-            </div>
-            <div class="footer-right">
-                <ul class="footer-nav">
-                    <li><a href="#hero">Trang chủ</a></li>
-                    <li><a href="#about">Giới thiệu</a></li>
-                    <li><a href="#skills">Kỹ năng</a></li>
-                    <li><a href="#projects">Dự án</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                </ul>
-            </div>
+            <p class="footer-left-text">
+                &copy; <span id="current-year">2026</span> <strong>Nguyễn Tiến Hoàng</strong> (Nayn) • Mã SV: <code>B25DCTV025</code>
+            </p>
+            <p class="footer-right-text">
+                Lập trình Web (RIPT1306) • Nhóm N2 • PTIT
+            </p>
         </div>
     </footer>
 
-    <!-- Feature 9: Back to Top Floating Button -->
-    <button class="back-to-top-btn" id="back-to-top" aria-label="Cuộn lên đầu trang" title="Cuộn lên đầu trang">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
 
-    <!-- Toast Notification Container -->
+    <!-- Toast container -->
     <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
-    <!-- Script file -->
     <script src="js/script.js" defer></script>
 </body>
 
