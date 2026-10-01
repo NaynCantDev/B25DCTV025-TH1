@@ -1,129 +1,122 @@
 /**
- * MINIMALIST PORTFOLIO JAVASCRIPT - NGUYỄN TIẾN HOÀNG (B25DCTV025)
- * Lập trình Web (RIPT1306) - PTIT
+ * JAVASCRIPT TƯƠNG TÁC - BÀI THỰC HÀNH 01 (LTW - PTIT)
+ * Sinh viên: Nguyễn Tiến Hoàng (B25DCTV025)
  * 
- * 9 TÍNH NĂNG TƯƠNG TÁC JAVASCRIPT:
- *  1. Chuyển đổi Theme Sáng / Tối (Dark / Light) kèm localStorage
- *  2. Menu Hamburger cho Mobile / Tablet
- *  3. Scrollspy - Highlight menu theo vùng cuộn trang
- *  4. Form Validation đa điều kiện + Toast Notification
- *  5. Đếm số lượng ký tự thời gian thực cho tin nhắn (Character counter)
- *  6. Lọc dự án theo danh mục & Tìm kiếm thời gian thực
- *  7. Hiệu ứng xuất hiện khi cuộn (Scroll Reveal qua IntersectionObserver)
- *  8. Năm tự động ở Footer
- *  9. Nút Back to top cuộn mượt
+ * CÁC TÍNH NĂNG TƯƠNG TÁC THEO ĐỀ BÀI:
+ *  1. Dark / Light mode (kèm localStorage)
+ *  2. Menu hamburger (giao diện di động)
+ *  3. Smooth scroll (cuộn mượt mà bù trừ header)
+ *  4. Validate form (kiểm tra nhiều điều kiện trước khi gửi)
+ *  5. Đếm ký tự (theo dõi độ dài ô lời nhắn thời gian thực)
+ *  6. Lọc / Tìm kiếm dự án theo từ khóa và danh mục
+ *  7. Hiển thị năm hiện tại tự động ở footer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
     /* ==========================================================================
-       1. THEME SÁNG / TỐI (DARK / LIGHT MODE)
+       1. DARK / LIGHT MODE
        ========================================================================== */
     const initTheme = () => {
-        const toggleBtn = document.getElementById('theme-toggle');
+        const btn = document.getElementById('theme-toggle');
         const root = document.documentElement;
 
-        const savedTheme = localStorage.getItem('nayn_minimal_theme');
+        const saved = localStorage.getItem('portfolio_theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+        root.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
 
-        root.setAttribute('data-theme', initialTheme);
-
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
-                const current = root.getAttribute('data-theme');
-                const next = current === 'dark' ? 'light' : 'dark';
+        if (btn) {
+            btn.addEventListener('click', () => {
+                const isDark = root.getAttribute('data-theme') === 'dark';
+                const next = isDark ? 'light' : 'dark';
                 root.setAttribute('data-theme', next);
-                localStorage.setItem('nayn_minimal_theme', next);
-                showToast(`Giao diện: ${next === 'dark' ? 'Tối' : 'Sáng'}`);
+                localStorage.setItem('portfolio_theme', next);
             });
         }
     };
 
     /* ==========================================================================
-       2. MENU MOBILE HAMBURGER
+       2. MENU HAMBURGER CHO MOBILE
        ========================================================================== */
     const initMobileMenu = () => {
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mainNav = document.getElementById('main-nav');
-        const navLinks = document.querySelectorAll('.main-nav .nav-link');
+        const btn = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('nav');
+        const links = document.querySelectorAll('.nav-link');
 
-        if (!hamburgerBtn || !mainNav) return;
+        if (!btn || !nav) return;
 
         const toggle = () => {
-            const isOpen = mainNav.classList.toggle('open');
-            hamburgerBtn.classList.toggle('active', isOpen);
-            hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+            const isOpen = nav.classList.toggle('open');
+            btn.classList.toggle('open', isOpen);
+            btn.setAttribute('aria-expanded', String(isOpen));
         };
 
         const close = () => {
-            mainNav.classList.remove('open');
-            hamburgerBtn.classList.remove('active');
-            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('open');
+            btn.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
         };
 
-        hamburgerBtn.addEventListener('click', (e) => {
+        btn.addEventListener('click', (e) => {
             e.stopPropagation();
             toggle();
         });
 
-        navLinks.forEach(link => link.addEventListener('click', close));
+        links.forEach(l => l.addEventListener('click', close));
 
         document.addEventListener('click', (e) => {
-            if (!mainNav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
                 close();
             }
         });
     };
 
     /* ==========================================================================
-       3. SCROLLSPY & SMOOTH SCROLL OFFSET
+       3. SMOOTH SCROLL & ACTIVE MENU
        ========================================================================== */
-    const initScrollspy = () => {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.main-nav .nav-link');
+    const initSmoothScroll = () => {
+        const links = document.querySelectorAll('.nav-link');
         const header = document.getElementById('header');
-        const headerOffset = header ? header.offsetHeight : 60;
+        const headerHeight = header ? header.offsetHeight : 56;
 
-        navLinks.forEach(link => {
+        links.forEach(link => {
             link.addEventListener('click', (e) => {
                 const targetId = link.getAttribute('href');
                 if (targetId && targetId.startsWith('#')) {
                     const el = document.querySelector(targetId);
                     if (el) {
                         e.preventDefault();
-                        const topPos = el.getBoundingClientRect().top + window.pageYOffset - (headerOffset + 10);
-                        window.scrollTo({ top: topPos, behavior: 'smooth' });
+                        const pos = el.getBoundingClientRect().top + window.pageYOffset - (headerHeight + 10);
+                        window.scrollTo({ top: pos, behavior: 'smooth' });
                     }
                 }
             });
         });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        } else {
-                            link.classList.remove('active');
-                        }
-                    });
+        // Highlight menu khi cuộn
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                const top = sec.offsetTop - headerHeight - 40;
+                if (window.pageYOffset >= top) {
+                    current = sec.getAttribute('id');
                 }
             });
-        }, {
-            root: null,
-            rootMargin: `-${headerOffset}px 0px -40% 0px`,
-            threshold: 0.1
-        });
 
-        sections.forEach(s => observer.observe(s));
+            links.forEach(link => {
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }, { passive: true });
     };
 
     /* ==========================================================================
-       4. FORM VALIDATION & SUBMISSION
+       4. VALIDATE FORM (KIỂM TRA NHIỀU ĐIỀU KIỆN)
        ========================================================================== */
     const initFormValidation = () => {
         const form = document.getElementById('contact-form');
@@ -131,295 +124,192 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const nameInput = document.getElementById('fullname');
         const emailInput = document.getElementById('email');
-        const subjectSelect = document.getElementById('subject');
-        const messageInput = document.getElementById('message');
+        const msgInput = document.getElementById('message');
         const submitBtn = document.getElementById('btn-submit');
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        const setValidity = (input, isValid, message = '') => {
-            const field = input.closest('.form-field');
-            if (!field) return;
-            const errorSpan = field.querySelector('.field-error');
-
+        const checkField = (input, isValid) => {
+            const group = input.closest('.form-group');
+            if (!group) return;
             if (isValid) {
-                field.classList.remove('has-error');
+                group.classList.remove('has-error');
             } else {
-                field.classList.add('has-error');
-                if (errorSpan && message) errorSpan.textContent = message;
+                group.classList.add('has-error');
             }
         };
 
         const validateName = () => {
             const val = nameInput.value.trim();
-            if (val.length < 2) {
-                setValidity(nameInput, false, 'Họ và tên tối thiểu 2 ký tự.');
-                return false;
-            }
-            if (/\d/.test(val)) {
-                setValidity(nameInput, false, 'Họ và tên không chứa số.');
-                return false;
-            }
-            setValidity(nameInput, true);
-            return true;
+            const valid = val.length >= 2 && !/\d/.test(val);
+            checkField(nameInput, valid);
+            return valid;
         };
 
         const validateEmail = () => {
             const val = emailInput.value.trim();
-            if (!emailPattern.test(val)) {
-                setValidity(emailInput, false, 'Địa chỉ email không đúng định dạng.');
-                return false;
-            }
-            setValidity(emailInput, true);
-            return true;
+            const valid = emailPattern.test(val);
+            checkField(emailInput, valid);
+            return valid;
         };
 
-        const validateSubject = () => {
-            const val = subjectSelect.value;
-            if (!val || val === '') {
-                setValidity(subjectSelect, false, 'Vui lòng chọn chủ đề liên hệ.');
-                return false;
-            }
-            setValidity(subjectSelect, true);
-            return true;
-        };
-
-        const validateMessage = () => {
-            const val = messageInput.value.trim();
-            if (val.length < 10) {
-                setValidity(messageInput, false, `Nội dung tối thiểu 10 ký tự (hiện có: ${val.length}).`);
-                return false;
-            }
-            setValidity(messageInput, true);
-            return true;
+        const validateMsg = () => {
+            const val = msgInput.value.trim();
+            const valid = val.length >= 10;
+            checkField(msgInput, valid);
+            return valid;
         };
 
         nameInput.addEventListener('blur', validateName);
         emailInput.addEventListener('blur', validateEmail);
-        subjectSelect.addEventListener('change', validateSubject);
-        messageInput.addEventListener('blur', validateMessage);
+        msgInput.addEventListener('blur', validateMsg);
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
             const v1 = validateName();
             const v2 = validateEmail();
-            const v3 = validateSubject();
-            const v4 = validateMessage();
+            const v3 = validateMsg();
 
-            if (!v1 || !v2 || !v3 || !v4) {
-                showToast('Vui lòng kiểm tra lại thông tin biểu mẫu.', 'error');
+            if (!v1 || !v2 || !v3) {
+                showToast('Vui lòng kiểm tra lại các trường thông tin màu đỏ.');
                 return;
             }
 
-            // Gửi giả lập
+            // Giả lập gửi tin nhắn
             submitBtn.disabled = true;
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnSpinner = submitBtn.querySelector('.btn-spinner');
-
-            if (btnText) btnText.style.display = 'none';
-            if (btnSpinner) btnSpinner.style.display = 'inline';
+            const label = submitBtn.querySelector('.btn-label');
+            const loading = submitBtn.querySelector('.btn-loading');
+            if (label) label.style.display = 'none';
+            if (loading) loading.style.display = 'inline';
 
             setTimeout(() => {
                 submitBtn.disabled = false;
-                if (btnText) btnText.style.display = 'inline';
-                if (btnSpinner) btnSpinner.style.display = 'none';
+                if (label) label.style.display = 'inline';
+                if (loading) loading.style.display = 'none';
 
-                showToast(`Cảm ơn ${nameInput.value.trim()}, tin nhắn đã gửi thành công!`, 'success');
+                showToast(`Cảm ơn bạn! Tin nhắn đã được gửi thành công.`);
                 form.reset();
-                document.querySelectorAll('.form-field').forEach(f => f.classList.remove('has-error'));
+                document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
 
-                const countEl = document.getElementById('char-count');
-                const counterWrap = document.getElementById('char-counter');
-                if (countEl) countEl.textContent = '0';
-                if (counterWrap) counterWrap.classList.remove('warn', 'limit');
-            }, 1000);
+                const count = document.getElementById('char-count');
+                const counter = document.getElementById('char-counter');
+                if (count) count.textContent = '0';
+                if (counter) counter.classList.remove('warn', 'limit');
+            }, 800);
         });
     };
 
     /* ==========================================================================
-       5. BỘ ĐẾM KÝ TỰ REAL-TIME
+       5. ĐẾM KÝ TỰ (CHARACTER COUNTER)
        ========================================================================== */
-    const initCharacterCounter = () => {
-        const textarea = document.getElementById('message');
-        const countDisplay = document.getElementById('char-count');
-        const counterWrap = document.getElementById('char-counter');
-        const maxLen = 500;
+    const initCharCounter = () => {
+        const msg = document.getElementById('message');
+        const count = document.getElementById('char-count');
+        const wrap = document.getElementById('char-counter');
+        const max = 500;
 
-        if (!textarea || !countDisplay || !counterWrap) return;
+        if (!msg || !count || !wrap) return;
 
-        textarea.addEventListener('input', () => {
-            const len = textarea.value.length;
-            countDisplay.textContent = len;
+        msg.addEventListener('input', () => {
+            const len = msg.value.length;
+            count.textContent = len;
 
-            if (len >= maxLen) {
-                counterWrap.classList.add('limit');
-                counterWrap.classList.remove('warn');
-            } else if (len >= maxLen * 0.9) {
-                counterWrap.classList.add('warn');
-                counterWrap.classList.remove('limit');
+            if (len >= max) {
+                wrap.classList.add('limit');
+                wrap.classList.remove('warn');
+            } else if (len >= max * 0.9) {
+                wrap.classList.add('warn');
+                wrap.classList.remove('limit');
             } else {
-                counterWrap.classList.remove('warn', 'limit');
+                wrap.classList.remove('warn', 'limit');
             }
         });
     };
 
     /* ==========================================================================
-       6. LỌC DANH MỤC & TÌM KIẾM DỰ ÁN
+       6. LỌC & TÌM KIẾM DỰ ÁN THEO TỪ KHÓA / TAG
        ========================================================================== */
-    const initProjectFilter = () => {
-        const tabs = document.querySelectorAll('.filter-tab');
-        const searchInput = document.getElementById('project-search-input');
-        const clearBtn = document.getElementById('clear-search-btn');
-        const projectItems = document.querySelectorAll('.project-item');
-        const emptyState = document.getElementById('empty-projects');
+    const initProjectSearchAndFilter = () => {
+        const searchInput = document.getElementById('project-search');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectBoxes = document.querySelectorAll('.project-box');
+        const emptyMsg = document.getElementById('empty-msg');
 
-        let activeCategory = 'all';
-        let searchQuery = '';
+        let currentCategory = 'all';
+        let currentSearch = '';
 
-        const applyFilter = () => {
+        const filter = () => {
             let matched = 0;
+            projectBoxes.forEach(box => {
+                const cat = box.getAttribute('data-category');
+                const keywords = (box.getAttribute('data-keywords') || '').toLowerCase();
+                const title = (box.querySelector('.project-title')?.textContent || '').toLowerCase();
+                const desc = (box.querySelector('.project-desc')?.textContent || '').toLowerCase();
 
-            projectItems.forEach(item => {
-                const cat = item.getAttribute('data-category');
-                const keywords = (item.getAttribute('data-keywords') || '').toLowerCase();
-                const title = (item.querySelector('.project-name')?.textContent || '').toLowerCase();
-                const desc = (item.querySelector('.project-summary')?.textContent || '').toLowerCase();
+                const combined = `${title} ${desc} ${keywords}`;
+                const matchCat = (currentCategory === 'all' || cat === currentCategory);
+                const matchSearch = currentSearch === '' || combined.includes(currentSearch);
 
-                const text = `${title} ${desc} ${keywords}`;
-
-                const matchCat = (activeCategory === 'all' || cat === activeCategory);
-                const matchQuery = (searchQuery === '' || text.includes(searchQuery));
-
-                if (matchCat && matchQuery) {
-                    item.style.display = 'block';
+                if (matchCat && matchSearch) {
+                    box.style.display = 'flex';
                     matched++;
                 } else {
-                    item.style.display = 'none';
+                    box.style.display = 'none';
                 }
             });
 
-            if (emptyState) {
-                emptyState.style.display = matched === 0 ? 'block' : 'none';
+            if (emptyMsg) {
+                emptyMsg.style.display = matched === 0 ? 'block' : 'none';
             }
         };
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                activeCategory = tab.getAttribute('data-filter') || 'all';
-                applyFilter();
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.getAttribute('data-filter') || 'all';
+                filter();
             });
         });
 
         if (searchInput) {
             searchInput.addEventListener('input', (e) => {
-                searchQuery = e.target.value.trim().toLowerCase();
-                if (clearBtn) {
-                    clearBtn.style.display = searchQuery.length > 0 ? 'block' : 'none';
-                }
-                applyFilter();
-            });
-        }
-
-        if (clearBtn && searchInput) {
-            clearBtn.addEventListener('click', () => {
-                searchInput.value = '';
-                searchQuery = '';
-                clearBtn.style.display = 'none';
-                searchInput.focus();
-                applyFilter();
+                currentSearch = e.target.value.trim().toLowerCase();
+                filter();
             });
         }
     };
 
     /* ==========================================================================
-       7. SCROLL REVEAL ANIMATIONS
-       ========================================================================== */
-    const initScrollReveal = () => {
-        const reveals = document.querySelectorAll('.reveal');
-
-        if (!('IntersectionObserver' in window)) {
-            reveals.forEach(r => r.classList.add('revealed'));
-            return;
-        }
-
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -30px 0px'
-        });
-
-        reveals.forEach(r => observer.observe(r));
-    };
-
-    /* ==========================================================================
-       8. NĂM TỰ ĐỘNG Ở FOOTER
+       7. HIỂN THỊ NĂM HIỆN TẠI Ở FOOTER
        ========================================================================== */
     const initFooterYear = () => {
-        const yearEl = document.getElementById('current-year');
-        if (yearEl) {
-            yearEl.textContent = new Date().getFullYear();
-        }
+        const el = document.getElementById('current-year');
+        if (el) el.textContent = new Date().getFullYear();
     };
 
     /* ==========================================================================
-       9. NÚT BACK TO TOP
+       TOAST THÔNG BÁO NHANH
        ========================================================================== */
-    const initBackToTop = () => {
-        const btn = document.getElementById('back-to-top');
-        if (!btn) return;
+    const showToast = (message) => {
+        const toast = document.getElementById('toast');
+        if (!toast) return;
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 280) {
-                btn.classList.add('visible');
-            } else {
-                btn.classList.remove('visible');
-            }
-        }, { passive: true });
-
-        btn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    };
-
-    /* ==========================================================================
-       TOAST NOTIFICATION
-       ========================================================================== */
-    const showToast = (message, type = 'info') => {
-        const container = document.getElementById('toast-container');
-        if (!container) return;
-
-        const toast = document.createElement('div');
-        toast.className = `toast toast-${type}`;
         toast.textContent = message;
-
-        container.appendChild(toast);
+        toast.style.display = 'block';
 
         setTimeout(() => {
-            toast.style.opacity = '0';
-            toast.style.transition = 'opacity 0.25s ease';
-            setTimeout(() => {
-                if (toast.parentNode) toast.parentNode.removeChild(toast);
-            }, 250);
+            toast.style.display = 'none';
         }, 3000);
     };
 
     // Khởi chạy
     initTheme();
     initMobileMenu();
-    initScrollspy();
+    initSmoothScroll();
     initFormValidation();
-    initCharacterCounter();
-    initProjectFilter();
-    initScrollReveal();
+    initCharCounter();
+    initProjectSearchAndFilter();
     initFooterYear();
-    initBackToTop();
 });
